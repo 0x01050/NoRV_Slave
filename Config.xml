@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AppConfig>
+  <Global>
+    <Item Key="ServerUrl" Value="http://35.222.155.75" />
+  </Global>
+</AppConfig>
