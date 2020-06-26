@@ -19,14 +19,15 @@ namespace Slave
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            RegisterScreen prompt = new RegisterScreen();
-            Application.Run(prompt);
-            if (prompt.DialogResult != DialogResult.OK)
-                return;
-
             Thread thread = new Thread(new ThreadStart(reportStatus));
             thread.Start();
-            Application.Run();
+
+            RegisterScreen prompt = new RegisterScreen();
+            Application.Run(prompt);
+            //if (prompt.DialogResult != DialogResult.OK)
+            //    return;
+            //Application.Run();
+
             thread.Abort();
         }
 
@@ -39,7 +40,7 @@ namespace Slave
                     var httpClient = new HttpClient();
                     string url = Config.getInstance().getServerUrl() + "/status/slave";
                     MultipartFormDataContent httpContent = new MultipartFormDataContent();
-                    httpContent.Add(new StringContent(L.getID()), "id");
+                    httpContent.Add(new StringContent(L.v()), "id");
                     httpClient.PostAsync(url, httpContent);
                 }
                 catch (Exception e)

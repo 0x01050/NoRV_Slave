@@ -36,8 +36,8 @@ namespace Slave
         private void RegisterScreen_Load(object sender, EventArgs e)
         {
             txtID.Text = L.v();
-            registerThread = new Thread(new ThreadStart(RegisterProc));
-            registerThread.Start();
+            //registerThread = new Thread(new ThreadStart(RegisterProc));
+            //registerThread.Start();
         }
 
         private void RegisterProc()

@@ -46,7 +46,7 @@
             this.label1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.label1.Size = new System.Drawing.Size(423, 146);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Waiting for Register Machine";
+            this.label1.Text = "Register Machien with this ID";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // splitContainer1
@@ -89,7 +89,7 @@
             this.MinimizeBox = false;
             this.Name = "RegisterScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NoRV Slave - Waiting for Register Machine";
+            this.Text = "NoRV Slave";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegisterScreen_FormClosing);
             this.Load += new System.EventHandler(this.RegisterScreen_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
